@@ -5,7 +5,7 @@ function setWindowView() {
         if(run){
             $.fn.fullpage.destroy('all');
         }
-        run = false;///Мое решение
+        run = false;///!!!
     } else {
         if(!run) {
             $('.fullpage').fullpage({
