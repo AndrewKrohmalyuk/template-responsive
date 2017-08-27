@@ -24,15 +24,22 @@ div {
   text-decoration: none;
   font-weight: normal;
 }
-.fullpage .section .bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-position: center !important;
-  background-repeat: no-repeat !important;
-  background-size: cover !important;
+.fullpage .section .slide:nth-child(1) .flex-container {
+  display: flex;
+  height: 75vh;
+  margin-top: 75px;
+  padding: 25px;
+  flex-wrap: wrap;
+}
+.fullpage .section .slide:nth-child(1) .flex-container .bar {
+  background: #ccc;
+  flex: 0 300px;
+  margin: 5px;
+  border-radius: 5px;
+  padding: 15px;
+}
+.fullpage .section .slide:nth-child(1) .flex-container .right {
+  flex: 1;
 }
 .header {
   position: absolute;

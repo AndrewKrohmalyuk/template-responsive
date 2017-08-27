@@ -18,18 +18,29 @@ h1,h2,h3,h4,h5,h6,ul,li,p,a,div {
 
 .fullpage {
     .section {
-        .bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-position: center !important;
-            background-repeat: no-repeat !important;
-            background-size: cover !important;
-        }
         .slide {
+            &:nth-child(1) {
+                .flex-container {
+                    display: flex;
+                    height: 75vh;
+                    margin-top: 75px;
+                    padding: 25px;
+                    flex-wrap: wrap;
+                    .bar {
+                        background: #ccc;
+                        flex: 0 300px;
+                        margin: 5px;
+                        border-radius: 5px;
+                        padding: 15px;
+                    }
+                    .left {
 
+                    }
+                    .right {
+                        flex: 1;
+                    }
+                }
+            }
         }
     }
 }
