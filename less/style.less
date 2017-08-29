@@ -202,6 +202,29 @@ h1,h2,h3,h4,h5,h6,ul,li,p,a,div {
         }
     }
 }
+.slide-btn {
+    .btn {
+        position: fixed;
+        top: 50%;
+        background: #444;
+        color: #fff;
+        font-size: 2em;
+        padding: 15px;
+        cursor: pointer;
+        transition: all 0.3s ease-out;
+        &.left {
+            left: 0;
+            border-radius: 0 5px 5px 0;
+        }
+        &.right {
+            right: 0;
+            border-radius: 5px 0 0 5px;
+        }
+        &:hover {
+            background: #222;
+        }
+    }
+}
 @media screen and (max-width:900px) {
     .fullpage {
         background: #fff;
@@ -210,8 +233,6 @@ h1,h2,h3,h4,h5,h6,ul,li,p,a,div {
             .slide {
                 .box {
                     width: 95%;
-                    //background: #eee;
-                    //margin-left: 50px;
                     margin-bottom: 35px;
                 }
             }
@@ -219,5 +240,8 @@ h1,h2,h3,h4,h5,h6,ul,li,p,a,div {
     }
     .nav-btn {
         display: block;
+    }
+    .slide-btn {
+        display: none;
     }
 }

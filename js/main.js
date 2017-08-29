@@ -1,5 +1,6 @@
 $(function(){
     var count = 1;
+    var currSlide = 0;
     setWindowView();
     $(window).resize(function(){
         setWindowView();
@@ -35,4 +36,15 @@ $(function(){
         }
     })
 
+    $('.slide-btn .btn').click(function(){
+        if($(this).hasClass('left')) {
+            currSlide--;
+            if(currSlide < 0) currSlide = 0;
+            $.fn.fullpage.moveTo('section', currSlide);
+        } else {
+            currSlide++;
+            if(currSlide > 3) currSlide = 3;
+            $.fn.fullpage.moveTo('section', currSlide);
+        }
+    });
 });
