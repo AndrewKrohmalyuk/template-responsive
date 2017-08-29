@@ -24,9 +24,6 @@ div {
   text-decoration: none;
   font-weight: normal;
 }
-.fullpage {
-  background: #eee;
-}
 .fullpage .section {
   padding-top: 30px;
 }
@@ -178,10 +175,13 @@ div {
 .mobile-menu .item span {
   padding-left: 25px;
 }
+.nav-btn {
+  display: none;
+}
 .nav-btn .btn {
   position: fixed;
   bottom: 20px;
-  left: 20px;
+  right: 20px;
   background: #16a085;
   padding: 5px;
   color: #eee;
@@ -198,6 +198,27 @@ div {
 .nav-btn .btn:hover {
   background: #188a74;
 }
+.slide-btn .btn {
+  position: fixed;
+  top: 50%;
+  background: #444;
+  color: #fff;
+  font-size: 2em;
+  padding: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.slide-btn .btn.left {
+  left: 0;
+  border-radius: 0 5px 5px 0;
+}
+.slide-btn .btn.right {
+  right: 0;
+  border-radius: 5px 0 0 5px;
+}
+.slide-btn .btn:hover {
+  background: #222;
+}
 @media screen and (max-width: 900px) {
   .fullpage {
     background: #fff;
@@ -206,8 +227,13 @@ div {
     padding-top: 120px;
   }
   .fullpage .section .slide .box {
-    width: 90%;
-    background: #eee;
+    width: 95%;
     margin-bottom: 35px;
+  }
+  .nav-btn {
+    display: block;
+  }
+  .slide-btn {
+    display: none;
   }
 }
