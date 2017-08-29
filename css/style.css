@@ -24,22 +24,23 @@ div {
   text-decoration: none;
   font-weight: normal;
 }
-.fullpage .section .slide:nth-child(1) .flex-container {
-  display: flex;
-  height: 75vh;
-  margin-top: 75px;
-  padding: 25px;
-  flex-wrap: wrap;
+.fullpage {
+  background: #eee;
 }
-.fullpage .section .slide:nth-child(1) .flex-container .bar {
-  background: #ccc;
-  flex: 0 300px;
-  margin: 5px;
+.fullpage .section {
+  padding-top: 30px;
+}
+.fullpage .section .slide .box {
+  background: #444;
+  color: #fff;
+  margin-left: auto;
+  margin-right: auto;
+  width: 85%;
+  height: 75%;
   border-radius: 5px;
-  padding: 15px;
-}
-.fullpage .section .slide:nth-child(1) .flex-container .right {
-  flex: 1;
+  font-size: 2em;
+  padding: 25px;
+  box-sizing: border-box;
 }
 .header {
   position: absolute;
@@ -128,4 +129,17 @@ div {
 }
 .mobile-menu .item span {
   padding-left: 25px;
+}
+@media screen and (max-width: 900px) {
+  .fullpage {
+    background: #fff;
+  }
+  .fullpage .section {
+    padding-top: 120px;
+  }
+  .fullpage .section .slide .box {
+    width: 90%;
+    height: 70vh;
+    margin-bottom: 35px;
+  }
 }

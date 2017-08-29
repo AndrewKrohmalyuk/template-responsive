@@ -17,29 +17,21 @@ h1,h2,h3,h4,h5,h6,ul,li,p,a,div {
 }
 
 .fullpage {
+    background: #eee;
     .section {
+        padding-top: 30px;
         .slide {
-            &:nth-child(1) {
-                .flex-container {
-                    display: flex;
-                    height: 75vh;
-                    margin-top: 75px;
-                    padding: 25px;
-                    flex-wrap: wrap;
-                    .bar {
-                        background: #ccc;
-                        flex: 0 300px;
-                        margin: 5px;
-                        border-radius: 5px;
-                        padding: 15px;
-                    }
-                    .left {
-
-                    }
-                    .right {
-                        flex: 1;
-                    }
-                }
+            .box {
+                background: #444;
+                color: #fff;
+                margin-left: auto;
+                margin-right: auto;
+                width: 85%;
+                height: 75%;
+                border-radius: 5px;
+                font-size: 2em;
+                padding: 25px;
+                box-sizing: border-box;
             }
         }
     }
@@ -133,6 +125,22 @@ h1,h2,h3,h4,h5,h6,ul,li,p,a,div {
         }
         span {
             padding-left: 25px;
+        }
+    }
+}
+
+@media screen and (max-width:900px) {
+    .fullpage {
+        background: #fff;
+        .section {
+            padding-top: 120px;
+            .slide {
+                .box {
+                    width: 90%;
+                    height: 70vh;
+                    margin-bottom: 35px;
+                }
+            }
         }
     }
 }
