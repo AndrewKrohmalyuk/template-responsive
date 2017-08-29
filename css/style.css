@@ -24,15 +24,23 @@ div {
   text-decoration: none;
   font-weight: normal;
 }
-.fullpage .section .bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-position: center !important;
-  background-repeat: no-repeat !important;
-  background-size: cover !important;
+.fullpage {
+  background: #eee;
+}
+.fullpage .section {
+  padding-top: 30px;
+}
+.fullpage .section .slide .box {
+  background: #444;
+  color: #fff;
+  margin-left: auto;
+  margin-right: auto;
+  width: 85%;
+  height: 75%;
+  border-radius: 5px;
+  font-size: 2em;
+  padding: 25px;
+  box-sizing: border-box;
 }
 .header {
   position: absolute;
@@ -121,4 +129,17 @@ div {
 }
 .mobile-menu .item span {
   padding-left: 25px;
+}
+@media screen and (max-width: 900px) {
+  .fullpage {
+    background: #fff;
+  }
+  .fullpage .section {
+    padding-top: 120px;
+  }
+  .fullpage .section .slide .box {
+    width: 90%;
+    height: 70vh;
+    margin-bottom: 35px;
+  }
 }

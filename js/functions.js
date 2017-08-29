@@ -9,7 +9,7 @@ function setWindowView() {
     } else {
         if(!run) {
             $('.fullpage').fullpage({
-                controlArrows: false,
+                controlArrows: true,
             });
             run = true;
         }
