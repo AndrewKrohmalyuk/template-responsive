@@ -123,6 +123,7 @@ div {
   flex: 1;
   color: #eee;
   text-align: center;
+  cursor: pointer;
 }
 .mobile-menu .item:hover {
   background: #222;
@@ -139,7 +140,7 @@ div {
   }
   .fullpage .section .slide .box {
     width: 90%;
-    height: 70vh;
+    height: 300px;
     margin-bottom: 35px;
   }
 }
