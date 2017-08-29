@@ -17,7 +17,7 @@ h1,h2,h3,h4,h5,h6,ul,li,p,a,div {
 }
 
 .fullpage {
-    background: #eee;
+    //background: #eee;
     .section {
         padding-top: 30px;
         .slide {
@@ -180,10 +180,11 @@ h1,h2,h3,h4,h5,h6,ul,li,p,a,div {
     }
 }
 .nav-btn {
+    display: none;
     .btn {
         position: fixed;
         bottom: 20px;
-        left: 20px;
+        right: 20px;
         background: #16a085;
         padding: 5px;
         color: #eee;
@@ -208,11 +209,15 @@ h1,h2,h3,h4,h5,h6,ul,li,p,a,div {
             padding-top: 120px;
             .slide {
                 .box {
-                    width: 90%;
-                    background: #eee;
+                    width: 95%;
+                    //background: #eee;
+                    //margin-left: 50px;
                     margin-bottom: 35px;
                 }
             }
         }
+    }
+    .nav-btn {
+        display: block;
     }
 }

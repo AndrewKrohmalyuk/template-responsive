@@ -24,9 +24,6 @@ div {
   text-decoration: none;
   font-weight: normal;
 }
-.fullpage {
-  background: #eee;
-}
 .fullpage .section {
   padding-top: 30px;
 }
@@ -178,10 +175,13 @@ div {
 .mobile-menu .item span {
   padding-left: 25px;
 }
+.nav-btn {
+  display: none;
+}
 .nav-btn .btn {
   position: fixed;
   bottom: 20px;
-  left: 20px;
+  right: 20px;
   background: #16a085;
   padding: 5px;
   color: #eee;
@@ -206,8 +206,10 @@ div {
     padding-top: 120px;
   }
   .fullpage .section .slide .box {
-    width: 90%;
-    background: #eee;
+    width: 95%;
     margin-bottom: 35px;
+  }
+  .nav-btn {
+    display: block;
   }
 }
