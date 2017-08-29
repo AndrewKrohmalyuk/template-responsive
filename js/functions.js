@@ -23,10 +23,8 @@ function setHash(val) {
     window.location.hash = val;
 }
 
-function menuController(action) {
-    if(action == 'open') {
-        $('.mobile-menu').addClass('active');
-    } else {
-        $('.mobile-menu').removeClass('active');
-    }
+function _scrollTo(target) {
+    $('body').animate({
+        scrollTop: ($('.slide[data-index="' + target + '"]').offset().top)
+    }, 500);
 }
