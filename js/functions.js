@@ -28,3 +28,9 @@ function _scrollTo(target) {
         scrollTop: ($('.slide[data-index="' + target + '"]').offset().top)
     }, 500);
 }
+
+function tabsController(index) {
+    if($('.tabs a').attr('data-index') == index) {
+        $(this).addClass('active');
+    }
+}

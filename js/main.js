@@ -39,12 +39,32 @@ $(function(){
     $('.slide-btn .btn').click(function(){
         if($(this).hasClass('left')) {
             currSlide--;
-            if(currSlide < 0) currSlide = 0;
+            if(currSlide == 0) {
+                $(this).addClass('hidden');
+            }
+            if(currSlide < 0) {
+                currSlide = 0;
+
+            }
             $.fn.fullpage.moveTo('section', currSlide);
+            console.log(currSlide + 1);
         } else {
             currSlide++;
             if(currSlide > 3) currSlide = 3;
             $.fn.fullpage.moveTo('section', currSlide);
+            console.log(currSlide + 1);
+
+            $('.tabs a').removeClass('active');
+
+            
         }
+    });
+
+    $('.tabs a').click(function() {
+        var index = parseFloat($(this).attr('data-index') - 1);
+        $('.tabs a').removeClass('active');
+        $(this).addClass('active');
+        currSlide = index;
+        $.fn.fullpage.moveTo('section', currSlide);
     });
 });
