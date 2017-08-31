@@ -28,3 +28,8 @@ function _scrollTo(target) {
         scrollTop: ($('.slide[data-index="' + target + '"]').offset().top)
     }, 500);
 }
+
+function tabsController(index) {
+    $('.tabs a').removeClass('active');
+    $('.tabs a:eq(' + index + ')').addClass('active');
+}

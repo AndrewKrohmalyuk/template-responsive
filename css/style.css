@@ -201,12 +201,16 @@ div {
 .slide-btn .btn {
   position: fixed;
   top: 50%;
-  background: #444;
+  background: #777;
   color: #fff;
   font-size: 2em;
   padding: 15px;
   cursor: pointer;
   transition: all 0.3s ease-out;
+}
+.slide-btn .btn.hidden {
+  display: none;
+  visibility: hidden;
 }
 .slide-btn .btn.left {
   left: 0;
@@ -218,6 +222,26 @@ div {
 }
 .slide-btn .btn:hover {
   background: #222;
+}
+.tabs {
+  position: absolute;
+  left: 50%;
+  top: 95px;
+  transform: translateX(-50%);
+}
+.tabs a {
+  width: 50px;
+  height: 5px;
+  background: #eee;
+  margin-right: 5px;
+  display: inline-block;
+  cursor: pointer;
+}
+.tabs a:last-child {
+  margin-right: 0;
+}
+.tabs a.active {
+  background: #16a085;
 }
 @media screen and (max-width: 900px) {
   .fullpage {
@@ -234,6 +258,9 @@ div {
     display: block;
   }
   .slide-btn {
+    display: none;
+  }
+  .tabs {
     display: none;
   }
 }

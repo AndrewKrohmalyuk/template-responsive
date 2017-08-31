@@ -1,6 +1,8 @@
 $(function(){
     var count = 1;
     var currSlide = 0;
+
+    tabsController(currSlide);
     setWindowView();
     $(window).resize(function(){
         setWindowView();
@@ -15,13 +17,11 @@ $(function(){
         $('.mobile-menu').removeClass('active');
         $('.header').removeClass('active');
     });
-
     $('.mobile-menu .item').click(function(){
         var target = $(this).attr('data-index');
         count = parseFloat($(this).attr('data-index'));
         _scrollTo(target);
     });
-
     $('.nav-btn .btn').click(function(){
         if(!$(this).hasClass('up')) {
             count++;
@@ -39,12 +39,23 @@ $(function(){
     $('.slide-btn .btn').click(function(){
         if($(this).hasClass('left')) {
             currSlide--;
-            if(currSlide < 0) currSlide = 0;
+            if(currSlide < 0) {
+                currSlide = 0;
+            }
             $.fn.fullpage.moveTo('section', currSlide);
+            tabsController(currSlide);
         } else {
             currSlide++;
             if(currSlide > 3) currSlide = 3;
             $.fn.fullpage.moveTo('section', currSlide);
+            tabsController(currSlide);
         }
+    });
+
+    $('.tabs a').click(function() {
+        $('.tabs a').removeClass('active');
+        $(this).addClass('active');
+        currSlide = parseFloat($(this).attr('data-index') - 1);
+        $.fn.fullpage.moveTo('section', currSlide);
     });
 });
