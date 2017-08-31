@@ -30,7 +30,6 @@ function _scrollTo(target) {
 }
 
 function tabsController(index) {
-    if($('.tabs a').attr('data-index') == index) {
-        $(this).addClass('active');
-    }
+    $('.tabs a').removeClass('active');
+    $('.tabs a:eq(' + index + ')').addClass('active');
 }
