@@ -260,4 +260,7 @@ div {
   .slide-btn {
     display: none;
   }
+  .tabs {
+    display: none;
+  }
 }
