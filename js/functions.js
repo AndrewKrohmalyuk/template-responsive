@@ -8,7 +8,8 @@ function setWindowView() {
     } else {
         if(!run) {
             $('.fullpage').fullpage({
-                controlArrows: true,
+                controlArrows: false,
+                lockAnchors: true,
             });
             run = true;
         }
