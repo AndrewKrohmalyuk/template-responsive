@@ -24,7 +24,7 @@ $(function(){
             _scrollTo(target);
         } else {
             currSlide = target - 1;
-            tabsController(curr);
+            tabsController(currSlide);
             $.fn.fullpage.moveTo('section', currSlide);
         }
     });
