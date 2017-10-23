@@ -34,10 +34,15 @@ h1,h2,h3,h4,h5,h6,ul,li,p,a,div {
                     margin-bottom: 20px;
                 }
                 .img-container {
-                    text-align: center;
+                    display: flex;
+                    justify-content: center;
                     img {
                         display: inline-block;
                         width: 150px;
+                        margin-right: 25px;
+                        &:last-child {
+                            margin-right: 0;
+                        }
                     }
                 }
                 .content {
@@ -258,6 +263,13 @@ h1,h2,h3,h4,h5,h6,ul,li,p,a,div {
                 .box {
                     width: 95%;
                     margin-bottom: 35px;
+                    .img-container {
+                        img {
+                            &:nth-child(2), &:nth-child(3) {
+                                display: none;
+                            }
+                        }
+                    }
                 }
             }
         }

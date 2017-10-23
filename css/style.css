@@ -42,11 +42,16 @@ div {
   margin-bottom: 20px;
 }
 .fullpage .section .slide .box .img-container {
-  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 .fullpage .section .slide .box .img-container img {
   display: inline-block;
   width: 150px;
+  margin-right: 25px;
+}
+.fullpage .section .slide .box .img-container img:last-child {
+  margin-right: 0;
 }
 .fullpage .section .slide .box .content {
   margin-top: 20px;
@@ -255,6 +260,10 @@ div {
   .fullpage .section .slide .box {
     width: 95%;
     margin-bottom: 35px;
+  }
+  .fullpage .section .slide .box .img-container img:nth-child(2),
+  .fullpage .section .slide .box .img-container img:nth-child(3) {
+    display: none;
   }
   .nav-btn {
     display: block;
